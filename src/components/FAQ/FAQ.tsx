@@ -9,7 +9,7 @@ const FAQ = ({ sections }: SectionProps) => {
     if (!faqSection || !faqSection.values.length) return null;
 
     const toggleFAQ = (index: number) => {
-        setOpenIndex(openIndex === index ? -1 : index); // Use -1 to indicate "none open"
+        setOpenIndex(openIndex === index ? -1 : index);
     };
 
     return (

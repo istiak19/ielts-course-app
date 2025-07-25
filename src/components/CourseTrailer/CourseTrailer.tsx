@@ -8,7 +8,7 @@ const CourseTrailer = ({ media }: { media: MediaItem[] }) => {
     if (!videoItems.length) return null;
 
     return (
-        <section id="trailer" className="w-full mb-10">
+        <section className="w-full mb-10">
             <div className="aspect-video w-full mb-6 overflow-hidden rounded-lg shadow-lg">
                 <iframe
                     src={`https://www.youtube.com/embed/${selectedVideo}`}
@@ -26,7 +26,7 @@ const CourseTrailer = ({ media }: { media: MediaItem[] }) => {
                         <button
                             key={video.resource_value}
                             onClick={() => setSelectedVideo(video.resource_value)}
-                            className={`w-32 h-20 cursor-pointer rounded overflow-hidden border-2 ${selectedVideo === video.resource_value ? "border-green-500" : "border-transparent"
+                            className={`w-28 h-20 cursor-pointer rounded overflow-hidden border-2 ${selectedVideo === video.resource_value ? "border-green-500" : "border-transparent"
                                 }`}
                             title="Watch this trailer"
                         >

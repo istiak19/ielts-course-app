@@ -52,13 +52,18 @@ const Home = () => {
             </div>
 
             {/* Right column: Trailer, CTA, Checklist */}
-            <div className="space-y-6 border border-green-300 p-2 rounded">
-                <CourseTrailer media={media} />
-                <button className="w-full bg-green-500 border-b-4 border-green-600 text-white py-3 rounded text-lg font-semibold cursor-pointer">
-                    {cta_text?.name || cta_text?.value}
-                </button>
-                <Checklist items={checklist} />
+            <div className="space-y-6 p-1">
+                <div className="border border-green-300 rounded p-4">
+                    <CourseTrailer media={media} />
+                    <button className="w-full bg-green-500 border-b-4 border-green-600 text-white py-3 rounded text-lg font-semibold cursor-pointer">
+                        {cta_text?.name || cta_text?.value}
+                    </button>
+                    <div>
+                        <Checklist items={checklist} />
+                    </div>
+                </div>
             </div>
+
         </div>
     );
 };
