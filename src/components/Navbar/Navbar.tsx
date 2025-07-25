@@ -13,7 +13,7 @@ const Navbar = ({ onChange }: { onChange: (lang: string) => void }) => {
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
                 {/* Logo */}
                 <Link to="/" className="text-2xl font-bold text-green-500">
-                    10 Minute School
+                    IELTS Course
                 </Link>
 
                 {/* Nav Links And Language Toggle */}
