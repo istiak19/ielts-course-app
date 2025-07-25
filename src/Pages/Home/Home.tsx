@@ -9,6 +9,7 @@ import AboutSection from "../../components/AboutSection/AboutSection";
 import CourseTrailer from "../../components/CourseTrailer/CourseTrailer";
 import Checklist from "../../components/Checklist/Checklist";
 import { useLang } from "../../context/LangContext";
+import FreePDFSection from "../../components/FreePDFSection/FreePDFSection";
 
 const Home = () => {
     const { lang } = useLang();
@@ -21,6 +22,7 @@ const Home = () => {
     if (!data) return <div className="p-8 text-center">Loading...</div>;
 
     const courseData = data.data;
+    console.log(courseData)
     const { title, description, media, checklist, cta_text, sections } = courseData;
 
     return (
@@ -36,16 +38,17 @@ const Home = () => {
 
                 <InstructorSection sections={sections} />
                 <FeatureSection sections={sections} />
+                <FreePDFSection sections={sections} />
                 <PointerSection sections={sections} />
                 <ExclusiveFeature sections={sections} />
                 <AboutSection sections={sections} />
             </div>
 
             {/* Right column: Trailer, CTA, Checklist */}
-            <div className="space-y-6">
+            <div className="space-y-6 border border-green-300 p-2 rounded">
                 <CourseTrailer media={media} />
-                <button className="w-full bg-blue-500 text-white py-3 rounded text-lg font-semibold cursor-pointer">
-                    {cta_text?.value || "কোর্সটি কিনুন"}
+                <button className="w-full bg-green-500 border-b-4 border-green-600 text-white py-3 rounded text-lg font-semibold cursor-pointer">
+                    {cta_text?.name || cta_text?.value}
                 </button>
                 <Checklist items={checklist} />
             </div>

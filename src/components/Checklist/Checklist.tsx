@@ -5,20 +5,20 @@ const Checklist: FC<ChecklistProps> = ({ items }) => {
     if (!items || items.length === 0) return null;
 
     return (
-        <section id="checklist" className="my-10">
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">কোর্সে যা থাকছে</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section className="my-10">
+            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">এই কোর্সে যা থাকছে</h2>
+            <div className="*:text-black">
                 {items.map((item) => (
                     <div
                         key={item.id}
-                        className="flex items-start space-x-4 bg-gray-50 p-4 rounded-md shadow-sm"
+                        className="flex items-center gap-3 px-3 py-2 rounded-md hover:bg-gray-100 transition"
                     >
                         <img
                             src={item.icon}
                             alt="checklist-icon"
-                            className="w-10 h-10 object-contain"
+                            className="w-5 h-5 object-contain mt-0.5"
                         />
-                        <p className="text-gray-800 font-medium">{item.text}</p>
+                        <span className="text-gray-700 text-sm md:text-base">{item.text}</span>
                     </div>
                 ))}
             </div>

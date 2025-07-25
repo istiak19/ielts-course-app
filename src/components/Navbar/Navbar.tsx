@@ -12,7 +12,7 @@ const Navbar = ({ onChange }: { onChange: (lang: string) => void }) => {
         <header className="bg-white shadow-md py-4 px-4 md:px-6 mb-6 sticky top-0 z-50 border-b border-blue-300">
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
                 {/* Logo */}
-                <Link to="/" className="text-2xl font-bold text-blue-500">
+                <Link to="/" className="text-2xl font-bold text-green-500">
                     10 Minute School
                 </Link>
 
@@ -22,7 +22,7 @@ const Navbar = ({ onChange }: { onChange: (lang: string) => void }) => {
                         <button
                             onClick={() => handleLangChange("en")}
                             className={`px-3 py-1 rounded border text-sm cursor-pointer ${activeLang === "en"
-                                ? "bg-blue-500 text-white border-blue-500"
+                                ? "bg-green-500 text-white border-green-500"
                                 : "text-gray-700 hover:bg-gray-100"
                                 }`}
                         >
@@ -31,7 +31,7 @@ const Navbar = ({ onChange }: { onChange: (lang: string) => void }) => {
                         <button
                             onClick={() => handleLangChange("bn")}
                             className={`px-3 py-1 rounded border cursor-pointer text-sm ${activeLang === "bn"
-                                ? "bg-blue-500 text-white border-blue-500"
+                                ? "bg-green-500 text-white border-green-500"
                                 : "text-gray-700 hover:bg-gray-100"
                                 }`}
                         >
@@ -39,9 +39,9 @@ const Navbar = ({ onChange }: { onChange: (lang: string) => void }) => {
                         </button>
                     </div>
                     <nav className="flex space-x-4 text-gray-600 font-medium">
-                        <a href="#course" className="hover:text-blue-500">Course</a>
-                        <a href="#instructors" className="hover:text-blue-500">Instructors</a>
-                        <a href="#checklist" className="hover:text-blue-500">Checklist</a>
+                        <a href="#course" className="hover:text-green-500">Course</a>
+                        <a href="#instructors" className="hover:text-green-500">Instructors</a>
+                        <a href="#checklist" className="hover:text-green-500">Checklist</a>
                     </nav>
                 </div>
             </div>

@@ -13,3 +13,9 @@ interface ChecklistItem {
 export interface ChecklistProps {
     items: ChecklistItem[];
 };
+
+export interface MediaItem {
+    resource_type: string;
+    resource_value: string;
+    thumbnail_url?: string;
+};
