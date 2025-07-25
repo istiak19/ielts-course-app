@@ -8,13 +8,15 @@ import ExclusiveFeature from "../../components/ExclusiveFeature/ExclusiveFeature
 import AboutSection from "../../components/AboutSection/AboutSection";
 import CourseTrailer from "../../components/CourseTrailer/CourseTrailer";
 import Checklist from "../../components/Checklist/Checklist";
+import { useLang } from "../../context/LangContext";
 
 const Home = () => {
+    const { lang } = useLang();
     const [data, setData] = useState<any>(null);
 
     useEffect(() => {
-        fetchCourseData("bn").then(setData).catch(console.error);
-    }, []);
+        fetchCourseData(lang).then(setData).catch(console.error);
+    }, [lang]);
 
     if (!data) return <div className="p-8 text-center">Loading...</div>;
 
@@ -42,7 +44,7 @@ const Home = () => {
             {/* Right column: Trailer, CTA, Checklist */}
             <div className="space-y-6">
                 <CourseTrailer media={media} />
-                <button className="w-full bg-blue-600 text-white py-3 rounded text-lg font-semibold cursor-pointer">
+                <button className="w-full bg-blue-500 text-white py-3 rounded text-lg font-semibold cursor-pointer">
                     {cta_text?.value || "কোর্সটি কিনুন"}
                 </button>
                 <Checklist items={checklist} />

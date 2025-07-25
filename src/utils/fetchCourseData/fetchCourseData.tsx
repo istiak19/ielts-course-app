@@ -1,4 +1,4 @@
-const fetchCourseData = async (lang = "en") => {
+const fetchCourseData = async (lang: string) => {
     const res = await fetch(`https://api.10minuteschool.com/discovery-service/api/v1/products/ielts-course?lang=${lang}`,
         {
             headers: {
