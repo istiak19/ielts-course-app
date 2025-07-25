@@ -11,6 +11,9 @@ import Checklist from "../../components/Checklist/Checklist";
 import { useLang } from "../../context/LangContext";
 import FreePDFSection from "../../components/FreePDFSection/FreePDFSection";
 import TestimonialCarousel from "../../components/TestimonialCarousel/TestimonialCarousel";
+import Requirements from "../../components/Requirements/Requirements";
+import HowToPay from "../../components/HowToPay/HowToPay";
+import FAQ from "../../components/FAQ/FAQ";
 
 const Home = () => {
     const { lang } = useLang();
@@ -43,6 +46,9 @@ const Home = () => {
                 <AboutSection sections={sections} />
                 <ExclusiveFeature sections={sections} />
                 <TestimonialCarousel sections={sections} />
+                <Requirements sections={sections} />
+                <HowToPay sections={sections} />
+                <FAQ sections={sections} />
             </div>
 
             {/* Right column: Trailer, CTA, Checklist */}

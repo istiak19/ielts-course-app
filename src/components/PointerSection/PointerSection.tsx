@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import type { SectionProps } from "../../interface/interface";
 
 const PointerSection = ({ sections }: SectionProps) => {
@@ -12,7 +12,7 @@ const PointerSection = ({ sections }: SectionProps) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 border p-5 rounded-xl border-gray-400">
                 {pointers.values.map((item: any) => (
                     <div key={item.id} className="flex items-start space-x-2">
-                        <FaCheckCircle className="text-green-500 mt-1 text-xl" />
+                        <FaCheck className="text-green-500 mt-1 text-xl" />
                         <p className="text-gray-700">{item.text}</p>
                     </div>
                 ))}

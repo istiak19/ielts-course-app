@@ -1,4 +1,4 @@
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 import type { SectionProps } from "../../interface/interface";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -21,7 +21,7 @@ const ExclusiveFeature = ({ sections }: SectionProps) => {
                             <ul className="space-y-2">
                                 {item.checklist?.map((point: string, i: number) => (
                                     <li key={i} className="flex items-start gap-2 text-gray-700 text-sm md:text-base">
-                                        <FaCheckCircle className="text-blue-500 mt-1" />
+                                        <FaCheck className="text-blue-500 mt-1" />
                                         <span>{point}</span>
                                     </li>
                                 ))}

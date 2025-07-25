@@ -17,7 +17,7 @@ const TestimonialCarousel = ({ sections }: SectionProps) => {
 
     return (
         <section className="my-16 max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">{testimonials.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-5">{testimonials.name}</h2>
 
             <div className="relative">
                 <div
@@ -27,7 +27,7 @@ const TestimonialCarousel = ({ sections }: SectionProps) => {
                     {testimonials.values.map((item: any) => (
                         <div
                             key={item.id}
-                            className="min-w-[320px] md:min-w-[420px] bg-white rounded-2xl shadow-md border snap-start shrink-0"
+                            className="min-w-[320px] md:min-w-[420px] bg-white rounded-2xl shadow-md border snap-start border-gray-400 shrink-0"
                         >
                             <div className="p-4">
                                 <div className="relative rounded-lg overflow-hidden">
