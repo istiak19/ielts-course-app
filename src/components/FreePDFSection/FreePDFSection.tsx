@@ -6,8 +6,7 @@ const FreePDFSection = ({ sections }: SectionProps) => {
     );
 
     if (!groupJoinSection) return null;
-
-    // Extract content from values array
+    
     const content = groupJoinSection.values?.[0];
     if (!content) return null;
 

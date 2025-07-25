@@ -10,6 +10,7 @@ import CourseTrailer from "../../components/CourseTrailer/CourseTrailer";
 import Checklist from "../../components/Checklist/Checklist";
 import { useLang } from "../../context/LangContext";
 import FreePDFSection from "../../components/FreePDFSection/FreePDFSection";
+import TestimonialCarousel from "../../components/TestimonialCarousel/TestimonialCarousel";
 
 const Home = () => {
     const { lang } = useLang();
@@ -22,7 +23,6 @@ const Home = () => {
     if (!data) return <div className="p-8 text-center">Loading...</div>;
 
     const courseData = data.data;
-    console.log(courseData)
     const { title, description, media, checklist, cta_text, sections } = courseData;
 
     return (
@@ -40,8 +40,9 @@ const Home = () => {
                 <FeatureSection sections={sections} />
                 <FreePDFSection sections={sections} />
                 <PointerSection sections={sections} />
-                <ExclusiveFeature sections={sections} />
                 <AboutSection sections={sections} />
+                <ExclusiveFeature sections={sections} />
+                <TestimonialCarousel sections={sections} />
             </div>
 
             {/* Right column: Trailer, CTA, Checklist */}
